@@ -1,34 +1,34 @@
 const alunos = [
   {
     nome: "Ruan",
-    nota: "7.8"
+    media: "7.8"
   },
   {
     nome: "Victor",
-    nota: "7.7"
+    media: "7.7"
   },
   {
     nome: "Matheus",
-    nota: "8"
+    media: "8"
   },
   {
     nome: "Edmar",
-    nota: "7.7"
+    media: "7.7"
   },
   {
     nome: "Gabriel",
-    nota: "6.8"
+    media: "6.8"
   },
 ]
 
 function findByNome(nome) {
-  if (nome) return alunos.filter((user) => user.nome.toLowerCase() == nome.toLowerCase())
+  if (nome) return alunos.filter((user) => user.nome.toLowerCase() == nome.toLowerCase());
 }
-function findByNota(nota) {
-  if (nota) return alunos.filter((user) => user.nota == nota)
+function findByMedia(media) {
+  if (media) return alunos.filter((user) => user.media == media);
 }
 
-module.exports = { alunos, findByNome, findByNota };
+module.exports = { alunos, findByNome, findByMedia };
 
 
 
