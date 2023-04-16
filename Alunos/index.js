@@ -13,15 +13,15 @@ app.get("/alunos", (req, res) => {
   res.json(JSON.parse(alunos.toString()));
 });
 
-app.post("/alunos/novo", (req, res) => {
+app.post("/alunos", (req, res) => {
   addAluno(req, res);
 });
 
-app.post("/alunos/delete/:index", (req, res) => {
+app.delete("/alunos/:index", (req, res) => {
   deleteAluno(req, res);
 });
 
-app.post("/alunos/atualizar/:index", (req, res) => {
+app.put("/alunos/:index", (req, res) => {
   attAluno(req, res);
 })
 
