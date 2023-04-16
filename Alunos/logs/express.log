@@ -1,0 +1,116 @@
+
+Request: GET /alunos at Sun Apr 16 2023 08:50:12 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+Response Body:
+[
+	{
+		"nome": "Ruan",
+		"media": "7.8"
+	},
+	{
+		"nome": "Victor",
+		"media": "7.7"
+	},
+	{
+		"nome": "Matheus",
+		"media": "8"
+	},
+	{
+		"nome": "Edmar",
+		"media": "7.7"
+	},
+	{
+		"nome": "Gabriel",
+		"media": "6.8"
+	},
+	{
+		"nome": "Davi",
+		"matricula": "123456",
+		"media": "6"
+	}
+]
+Response: 304 4.871 ms 
+
+Request: POST /alunos at Sun Apr 16 2023 08:50:56 GMT-0300, IP: ::1, User Agent: PostmanRuntime/7.32.2
+Request Body:
+{
+	"nome": "Davi",
+	"matricula": "123456",
+	"media": "6"
+}
+Response Body:
+{
+	"message": "Aluno cadastrado"
+}
+Response: 201 0.634 ms 
+
+Request: GET /alunos at Sun Apr 16 2023 08:51:01 GMT-0300, IP: ::1, User Agent: PostmanRuntime/7.32.2
+Response Body:
+[
+	{
+		"nome": "Ruan",
+		"media": "7.8"
+	},
+	{
+		"nome": "Victor",
+		"media": "7.7"
+	},
+	{
+		"nome": "Matheus",
+		"media": "8"
+	},
+	{
+		"nome": "Edmar",
+		"media": "7.7"
+	},
+	{
+		"nome": "Gabriel",
+		"media": "6.8"
+	},
+	{
+		"nome": "Davi",
+		"matricula": "123456",
+		"media": "6"
+	}
+]
+Response: 200 3.892 ms 
+
+Request: DELETE /alunos/0 at Sun Apr 16 2023 08:51:12 GMT-0300, IP: ::1, User Agent: PostmanRuntime/7.32.2
+Response Body:
+{
+	"message": "Aluno removido"
+}
+Response: 201 2.535 ms 
+
+Request: GET /alunos at Sun Apr 16 2023 08:51:20 GMT-0300, IP: ::1, User Agent: PostmanRuntime/7.32.2
+Response Body:
+[
+	{
+		"nome": "Victor",
+		"media": "7.7"
+	},
+	{
+		"nome": "Matheus",
+		"media": "8"
+	},
+	{
+		"nome": "Edmar",
+		"media": "7.7"
+	},
+	{
+		"nome": "Gabriel",
+		"media": "6.8"
+	}
+]
+Response: 200 3.911 ms 
+
+Request: PUT /alunos/3 at Sun Apr 16 2023 08:51:25 GMT-0300, IP: ::1, User Agent: PostmanRuntime/7.32.2
+Request Body:
+{
+	"nome": "Jorge",
+	"media": "4"
+}
+Response Body:
+{
+	"message": "Aluno atualizado"
+}
+Response: 201 2.027 ms 
