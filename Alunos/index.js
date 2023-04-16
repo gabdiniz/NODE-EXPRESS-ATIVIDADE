@@ -1,9 +1,20 @@
 const express = require("express");
+const morganBody = require("morgan-body");
 const { findByNome, findByMedia, addAluno, deleteAluno, attAluno } = require("./alunos");
 const fs = require("fs");
+const path = require("path");
 
 const app = express();
 app.use(express.json());
+
+const log = fs.createWriteStream(
+  path.join(__dirname, "./logs", "express.log"), { flags: 'a' }
+)
+
+morganBody(app, {
+  noColors: true,
+  stream: log
+})
 
 app.get("/alunos", (req, res) => {
   const { nome, media } = req.query;
